@@ -196,16 +196,17 @@ class ConversationBot:
 
         return gr.update(visible = True)
 
-bot = ConversationBot({'Text2Image': 'cuda:0',
-                       'ImageCaptioning': 'cuda:0',
-                       'ImageEditing': 'cuda:0',
-                       'VisualQuestionAnswering': 'cuda:0',
-                       'Image2Canny': 'cpu',
-                       'CannyText2Image': 'cuda:0',
-                       'InstructPix2Pix': 'cuda:0',
-                       'Image2Depth': 'cpu',
-                       'DepthText2Image': 'cuda:0',
-                       })
+# bot = ConversationBot({'Text2Image': 'cuda:0',
+#                        'ImageCaptioning': 'cuda:0',
+#                        'ImageEditing': 'cuda:0',
+#                        'VisualQuestionAnswering': 'cuda:0',
+#                        'Image2Canny': 'cpu',
+#                        'CannyText2Image': 'cuda:0',
+#                        'InstructPix2Pix': 'cuda:0',
+#                        'Image2Depth': 'cpu',
+#                        'DepthText2Image': 'cuda:0',
+#                        })
+bot = ConversationBot({'ImageCaptioning': 'cuda:0','Text2Image': 'cuda:0',})
 
 with gr.Blocks(css="#chatbot {overflow:auto; height:500px;}") as demo:
     gr.Markdown("<h3><center>Visual ChatGPT</center></h3>")
